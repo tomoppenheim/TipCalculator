@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:background="#3F3B3B"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.tomoppenheim.tipcalcuatlor.MainActivity">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:textColor="#FFFFFF"
+        android:ems="10"
+        android:id="@+id/tipPercent"
+        android:hint="Enter Tip Percentage"
+        android:layout_below="@+id/checkAmount"
+        android:layout_alignStart="@+id/checkAmount" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:textColor="#FFFFFF"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_below="@+id/tipPercent"
+        android:layout_alignStart="@+id/tipPercent"
+        android:id="@+id/numberPeople"
+        android:hint="Enter Number of People" />
+
+    <TextView
+        android:text="Tip Calculator"
+        android:layout_width="match_parent"
+        android:textColor="#FFFFFF"
+        android:layout_height="wrap_content"
+        android:id="@+id/TipCalculator"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:text="Tip"
+        android:layout_width="wrap_content"
+        android:textColor="#FFFFFF"
+        android:layout_height="wrap_content"
+        android:id="@+id/tipPercentText"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/tipPercent"
+        android:layout_alignBottom="@+id/tipPercent"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Num. People"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/numPeopleTextView"
+        android:textColor="#FFFFFF"
+        android:layout_alignBaseline="@+id/numberPeople"
+        android:layout_alignBottom="@+id/numberPeople"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/numberPeople"
+        android:textSize="18sp" />
+
+    <TextView
+        android:text="Bill $"
+        android:layout_width="wrap_content"
+        android:textColor="#FFFFFF"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkAmountTextView"
+        android:layout_alignBaseline="@+id/checkAmount"
+        android:layout_alignBottom="@+id/checkAmount"
+        android:layout_alignParentStart="true"
+        android:textSize="18sp" />
+
+    <TextView
+        android:text="Total Bill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="69dp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/totalBillTextView"
+        android:textSize="18sp"
+        android:layout_below="@+id/tipButton"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Total Tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:layout_below="@+id/totalBillTextView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="32dp"
+        android:id="@+id/TotalTipTextView"
+        android:textSize="18sp" />
+
+    <TextView
+        android:text="Tip Per"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:layout_alignBottom="@+id/TotalTipCalcView"
+        android:layout_alignStart="@+id/TotalPerPersonTextView"
+        android:id="@+id/TipPerPersonTextView"
+        android:textSize="18sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="25dp"
+        android:id="@+id/checkAmount"
+        android:hint="Enter Meal Price"
+        android:layout_below="@+id/TipCalculator"
+        android:layout_alignParentEnd="true"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TotalBillCalcView"
+        android:layout_above="@+id/TotalTipTextView"
+        android:layout_toEndOf="@+id/TotalTipTextView"
+        android:layout_marginStart="19dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TotalTipCalcView"
+        android:textSize="18sp"
+        android:textAlignment="viewStart"
+        android:textColor="#FFFFFF"
+        android:layout_alignBaseline="@+id/TotalTipTextView"
+        android:layout_alignBottom="@+id/TotalTipTextView"
+        android:layout_alignEnd="@+id/TotalBillCalcView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TotalPerPersonCalc"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:layout_alignBaseline="@+id/totalBillTextView"
+        android:layout_alignBottom="@+id/totalBillTextView"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:id="@+id/TipPerPersonCalc"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/TotalTipTextView"
+        android:layout_alignBottom="@+id/TotalTipTextView"
+        android:layout_alignEnd="@+id/TotalPerPersonCalc" />
+
+    <Button
+        android:text="Dial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/webButton"
+        android:layout_toStartOf="@+id/webButton"
+        android:id="@+id/dialButton" />
+
+    <Button
+        android:text="Web"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/webButton"
+        android:layout_alignBaseline="@+id/tipButton"
+        android:layout_alignBottom="@+id/tipButton"
+        android:layout_toStartOf="@+id/tipButton" />
+
+    <Button
+        android:text="Tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tipButton"
+        android:layout_marginTop="21dp"
+        android:layout_below="@+id/numberPeople"
+        android:layout_toEndOf="@+id/mapButton" />
+
+    <Button
+        android:text="Map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mapButton"
+        android:layout_below="@+id/dialButton"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Total Per"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:id="@+id/TotalPerPersonTextView"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/TotalPerPersonCalc"
+        android:layout_alignBottom="@+id/TotalPerPersonCalc"
+        android:layout_toEndOf="@+id/dialButton"
+        android:layout_marginStart="38dp" />
+</RelativeLayout>
